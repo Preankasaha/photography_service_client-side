@@ -51,7 +51,7 @@ const Login = () => {
                                 <button className="btn btn-primary glass">Log In</button>
                             </div>
                             <div>
-                                If you are new to this site <Link to='signup' className='btn btn-outline glass'>Sign Up</Link>
+                                If you are new to this site <Link to='/signup' className='btn btn-outline glass'>Sign Up</Link>
                             </div>
                         </form>
                     </div>
