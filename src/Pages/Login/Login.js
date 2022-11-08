@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
-    const { loginUser, logOut } = useContext(AuthContext);
+    const { loginUser, logOut, providerSignIn } = useContext(AuthContext);
+    const googleProvider = new googleProvider();
     const [error, setError] = useState()
     const handleLogIn = event => {
         event.preventDefault();
@@ -21,8 +22,19 @@ const Login = () => {
                 form.reset();
                 setError('');
             })
-        
-        
+
+    }
+
+    //sign in with google
+    const handleGoogleSignIn = () => {
+        providerSignIn(googleProvider)
+            .then(result => {
+                const user = result.user
+
+            }).catch(error => {
+                // console.error(error)
+                setError(error.message);
+            })
     }
 
     return (
@@ -54,7 +66,7 @@ const Login = () => {
                                 <button className="btn btn-primary glass">Log In</button>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary glass">Log In With Github</button>
+                                <button onClick={handleGoogleSignIn} className="btn btn-primary glass">Log In With Google</button>
                             </div>
                             <div>
                                 If you are new to this site <Link to='/signup' className='btn btn-outline glass'>Sign Up</Link>
