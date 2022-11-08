@@ -6,7 +6,14 @@ const Header = () => {
     const menuItems = <>
         <li>
             <Link to='/' className='btn btn-ghost'>Home</Link>
-            <Link to='/login' className='btn btn-ghost'>LogIn</Link>
+            {
+                <Link to='/login' className='btn btn-ghost'>Log In</Link>
+                    ?
+                    <Link to='/logout' className='btn btn-ghost'>Log Out</Link>
+                    :
+                    <Link to='/login' className='btn btn-ghost'>Log In</Link>
+
+            }
         </li>
     </>
 

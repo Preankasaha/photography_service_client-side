@@ -1,9 +1,10 @@
+import { signOut } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
-    const { loginUser } = useContext(AuthContext);
+    const { loginUser, logOut } = useContext(AuthContext);
     const [error, setError] = useState()
     const handleLogIn = event => {
         event.preventDefault();
@@ -20,6 +21,8 @@ const Login = () => {
                 form.reset();
                 setError('');
             })
+        
+        
     }
 
     return (
@@ -49,6 +52,9 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary glass">Log In</button>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className="btn btn-primary glass">Log In With Github</button>
                             </div>
                             <div>
                                 If you are new to this site <Link to='/signup' className='btn btn-outline glass'>Sign Up</Link>
