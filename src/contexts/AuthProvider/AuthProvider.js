@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import app from "../../firebase/firebase.config";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 
 
 export const AuthContext = createContext();
@@ -32,6 +32,11 @@ const AuthProvider = ({ children }) => {
     const logOut = () => {
         // localStorage.removeItem('genius-token');
         return signOut(auth);
+    }
+
+    //user profile
+    const updateUserProfile = profile => {
+        return updateProfile(auth.currentUser, profile);
     }
 
     //to monitor user state
