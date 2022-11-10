@@ -1,17 +1,6 @@
 [
     {
         "service_id": "01",
-        "title": "Wedding Photography",
-        "img": "https://creativecloudbd.com/wp-content/uploads/2021/12/image_2021_12_07T17_44_00_795Z.png",
-        "price": "555.00",
-        "description": "You want that ‘most special day in your life’ captured in a awesome way and want that new chapter to be embedded in your memory. You’ve spent years dreaming of your perfect wedding. It will never look or feel like this again, and that’s what makes this moment so damn special. Everyone- your near and dear ones realize how important a day it is for you and will go that extra mile to make it absolutely perfect. You can think of me among one of them. Your weeding photography will be capture those light, laughter moments and the serious ones, the chaos and confusion so that you can relive the scenes one by one, long after the wedding is over. Your wedding will be photographed from every angle and covered as adequately as it possibly can. From the makeup and jewelry to your gorgeous attire, from the smiles and frowns of your guests to the decorations all around, you can rest assured that everything is captured in the best way possible.",
-        "duration": "standard 4 hours",
-        "photos": "All edited photoes delivered in DVD",
-        "retouch": "100 special edited photoes",
-        "print": "4R(4x6):100 copies"
-    },
-    {
-        "service_id": "02",
         "title": "Holud Photography",
         "img": "https://photos.smugmug.com/Bangladeshi-Wedding-Photos/i-CTb9VM9/2/9002143d/M/_JOY1545-Exposure-M.jpg",
         "price": "255.00",
@@ -21,19 +10,21 @@
         "retouch": "50 special edited photoes",
         "print": "4R(4x6):50 copies"
     },
+
+    {
+        "service_id": "02",
+        "title": "Wedding Photography",
+        "img": "https://creativecloudbd.com/wp-content/uploads/2021/12/image_2021_12_07T17_44_00_795Z.png",
+        "price": "555.00",
+        "description": "You want that ‘most special day in your life’ captured in a awesome way and want that new chapter to be embedded in your memory. You’ve spent years dreaming of your perfect wedding. It will never look or feel like this again, and that’s what makes this moment so damn special. Everyone- your near and dear ones realize how important a day it is for you and will go that extra mile to make it absolutely perfect. You can think of me among one of them. Your weeding photography will be capture those light, laughter moments and the serious ones, the chaos and confusion so that you can relive the scenes one by one, long after the wedding is over. Your wedding will be photographed from every angle and covered as adequately as it possibly can. From the makeup and jewelry to your gorgeous attire, from the smiles and frowns of your guests to the decorations all around, you can rest assured that everything is captured in the best way possible.",
+        "duration": "standard 4 hours",
+        "photos": "All edited photoes delivered in DVD",
+        "retouch": "100 special edited photoes",
+        "print": "4R(4x6):100 copies"
+    },
+    
     {
         "service_id": "03",
-        "title": "Pre/Post Wedding Photography",
-        "img": "https://image.wedmegood.com/resized/800X/uploads/project/947/1435215899_IMG_2151.jpg",
-        "price": "155.00",
-        "description": "Capture moments of yours in frame and smile by looking back to those days. Spend your time being oblivious to the rest of the world. Feel how the journey of twos started once. How you became one with times. Time will fly, but the moments will speak with you even in your future days too. Your pre/post wedding will capture those light, laughter moments and the serious ones, the chaos and confusion so that you can relive the scenes one by one in the upcoming days of your journey. Your pre/post wedding photograph will be captured from every angle and covered as adequately as it possibly can. You can rest assured that everything is captured in the best way possible.",
-        "Duration": "standard 2 hours",
-        "photos": "All edited photoes delivered in DVD",
-        "retouch": "35 special edited photoes",
-        "print": "4R(4x6):35 copies"
-    },
-    {
-        "service_id": "04",
         "title": "Reception Photography",
         "img": "https://primehouseproductions.com/wp-content/uploads/2021/06/CD5A4238-1536x1024.jpg",
         "price": "555.00",
@@ -43,6 +34,19 @@
         "retouch": "100 special edited photoes",
         "print": "4R(4x6):100 copies"
     },
+    
+    {
+        "service_id": "04",
+        "title": "Pre/Post Wedding Photography",
+        "img": "https://image.wedmegood.com/resized/800X/uploads/project/947/1435215899_IMG_2151.jpg",
+        "price": "155.00",
+        "description": "Capture moments of yours in frame and smile by looking back to those days. Spend your time being oblivious to the rest of the world. Feel how the journey of twos started once. How you became one with times. Time will fly, but the moments will speak with you even in your future days too. Your pre/post wedding will capture those light, laughter moments and the serious ones, the chaos and confusion so that you can relive the scenes one by one in the upcoming days of your journey. Your pre/post wedding photograph will be captured from every angle and covered as adequately as it possibly can. You can rest assured that everything is captured in the best way possible.",
+        "Duration": "standard 2 hours",
+        "photos": "All edited photoes delivered in DVD",
+        "retouch": "35 special edited photoes",
+        "print": "4R(4x6):35 copies"
+    },
+    
     {
         "service_id": "05",
         "title": "Combo Classic (Holud + Wedding)",

@@ -1,14 +1,14 @@
 import React from 'react';
-import PrivateRoutes from '../../Router/PrivateRoutes/PrivateRoutes';
-import Review from '../Review/Review';
 
-import ServiceDetailsCard from './ServiceDetailsCard';
+import Review from '../../Private/Review/ReviewForm';
+
+
 
 const ServiceDetails = () => {
 
     return (
         <div>
-            <ServiceDetailsCard></ServiceDetailsCard>
+          
 
         </div>
     );

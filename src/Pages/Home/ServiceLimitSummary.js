@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-const ServiceSummaryCard = ({ service }) => {
+
+const ServiceLimitSummary = ({ service }) => {
     console.log(service);
     const { title, img, description, duration, price } = service;
     return (
@@ -31,4 +32,4 @@ const ServiceSummaryCard = ({ service }) => {
     );
 };
 
-export default ServiceSummaryCard;
+export default ServiceLimitSummary;

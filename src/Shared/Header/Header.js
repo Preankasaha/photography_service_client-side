@@ -19,14 +19,26 @@ const Header = () => {
     const menuItems = <>
         <li>
             <Link to='/' className='btn btn-ghost'>Home</Link>
+            <Link to='/blog' className='btn btn-ghost'>Blog</Link>
+
             {
                 user?.uid
                     ?
-                    <Link onClick={handleLogOut} className='btn btn-ghost'>Log Out</Link>
-                    :
-                    <Link to='/login' className='btn btn-ghost'>Log In</Link>
+                    <>
 
+                        <Link to='/myreviews' className='btn btn-ghost'>My reviews</Link>
+
+                        <Link to='/addservice' className='btn btn-ghost'>Add Service</Link>
+
+                        <Link onClick={handleLogOut} className='btn btn-ghost'>Log Out</Link>
+                    </>
+                    :
+                    <>
+                        <Link to='/login' className='btn btn-ghost'>Log In</Link>
+
+                    </>
             }
+
         </li>
     </>
 

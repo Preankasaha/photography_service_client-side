@@ -8,7 +8,7 @@ const SignUp = () => {
 
     const [error, setError] = useState();
 
-    useTitle('signup');
+    useTitle('Signup');
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;

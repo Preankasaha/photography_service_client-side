@@ -2,9 +2,10 @@ import { GoogleAuthProvider, signOut } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
-    const { loginUser, logOut, providerSignIn } = useContext(AuthContext);
+    const { loginUser, providerSignIn, loading } = useContext(AuthContext);
     //goggle provider
     const googleProvider = new GoogleAuthProvider();
 
@@ -13,7 +14,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-
+    useTitle('LogIn');
+    
     const handleLogIn = event => {
         event.preventDefault();
         const form = event.target;
@@ -24,6 +26,9 @@ const Login = () => {
         //log in user
         loginUser(email, password)
             .then(result => {
+                if (loading) {
+                    return <progress className="progress w-full"></progress>
+                }
                 const user = result.user;
                 console.log(user);
                 form.reset();
