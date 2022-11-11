@@ -10,12 +10,12 @@ const MyReview = () => {
     const [myreviews, setMyreviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myreviews?email=${user?.email}`, {
+        fetch(`https://photo-artisan-server.vercel.app/myreviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('photoToken')}`
             }
         })
-        
+
             .then(res => res.json())
             .then(data => setMyreviews(data))
     }, [user?.email])
@@ -26,7 +26,7 @@ const MyReview = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to cancel this order');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://photo-artisan-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -49,17 +49,18 @@ const MyReview = () => {
                     <div className=' bg-slate-900 my-24'>
                         <h1 className='text-5xl text-center text-white font-extrabold p-14 glass'>NO REVIEWS WERE ADDED</h1>
                     </div>
-
                     :
                     <h1 className='text-5xl text-center text-slate-900'>Total Reviews {myreviews.length}</h1>
-            }
+            } 
 
 
-            {myreviews.map(myreview => <MyReviewDetails
+            {
+                myreviews.map(myreview => <MyReviewDetails
                 key={myreview._id}
                 myreview={myreview}
                 handleDelete={handleDelete}
-            ></MyReviewDetails>)}
+                ></MyReviewDetails>)
+            }
             <ToastContainer />
         </div>
     );

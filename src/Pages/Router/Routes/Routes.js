@@ -42,13 +42,13 @@ export const router = createBrowserRouter([
 
             {
                 path: '/services/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({ params }) => fetch(`https://photo-artisan-server.vercel.app/services/${params.id}`),
                 element: <ServiceDetailsCard></ServiceDetailsCard>
 
             },
             {
                 path: '/checkout/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({ params }) => fetch(`https://photo-artisan-server.vercel.app/services/${params.id}`),
                 element: <ReviewForm />
 
             },
@@ -60,7 +60,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/reviewsupdate/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`),
+                loader: ({ params }) => fetch(`https://photo-artisan-server.vercel.app/reviews/${params.id}`),
                 element: <UpdateForm />
 
 

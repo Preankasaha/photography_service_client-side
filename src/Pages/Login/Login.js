@@ -3,9 +3,12 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const { loginUser, providerSignIn, loading, user } = useContext(AuthContext);
+
 
     //goggle provider
     const googleProvider = new GoogleAuthProvider();
@@ -18,7 +21,10 @@ const Login = () => {
 
     // page title
     useTitle('LogIn');
-
+    //loader added
+    if (loading) {
+        return <progress className="progress w-full"></progress>
+    }
 
     const handleLogIn = event => {
         event.preventDefault();
@@ -26,27 +32,21 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
-        //loader added
-        if (loading) {
-            return <progress className="progress w-full"></progress>
-        }
+
         //log in user
         loginUser(email, password)
             .then(result => {
-                if (loading) {
-                    return <progress className="progress w-full"></progress>
-                }
                 const user = result.user;
                 // jwt user
                 // console.log(user);
-
+                toast.success('You sign in successfully')
                 const currentUser = {
                     email: user.email
                 }
 
                 console.log(currentUser);
                 //get jwt token
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://photo-artisan-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -73,7 +73,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 //jwt user
-
+                toast.success('You sign in successfully')
                 navigate(from, { replace: true });
             }).catch(error => {
                 setError(error.message);
@@ -119,6 +119,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
 
     );

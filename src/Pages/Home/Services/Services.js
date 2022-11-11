@@ -10,7 +10,7 @@ const Services = () => {
 
     useEffect(() => {
         setLoader(true);
-        fetch('http://localhost:5000/services')
+        fetch('https://photo-artisan-server.vercel.app/services')
 
             .then(res => res.json())
             .then(data => {

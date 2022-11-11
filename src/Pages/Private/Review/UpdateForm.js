@@ -25,7 +25,7 @@ const UpdateForm = () => {
             message,
         }
 
-        fetch(`http://localhost:5000/reviews/${_id}`, {
+        fetch(`https://photo-artisan-server.vercel.app/reviews/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

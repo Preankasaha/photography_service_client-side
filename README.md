@@ -1,3 +1,44 @@
+# Project Title
+
+Photo With Artisan
+
+
+## Project Description
+
+This project will serve as an photography service application by an individua photographer. React app is used for this project. React router dom is used for availing dynamic routing facilities bestowed by the react library.Basically, React, react router dom, tailwindcss and daisyUI, firebase are used for the project. Along with these, packages like  react-photo-view , react icon are used to facilate the users' interaction.
+
+The site has a navbar with home, blog, login, logout, my reviews, add services router. There are 6 services primarily included to this site. But, more services are addable. clicking the course router will take you to the options with course summary card. clicking the button on course summary card will lead to course details area. User will get here detail information about the services selected. To leave review, user will need to log in first. Moreover, Note that, private routes' access is restrcited to any unauthorized user.    
+
+### Technologies
+React
+React Router
+Firebase
+Tailwind
+DaisyUI
+React Icon
+React toastify
+React-photo-view
+Mongodb for database
+JWT
+
+#### Livesite Link
+
+https://photo-artisan.web.app
+
+#####  API Reference
+https://photo-artisan-server.vercel.app/services
+
+https://photo-artisan-server.vercel.app/services/id
+example: https://e-learning-server-kappa.vercel.app/courses/1
+
+https://photo-artisan-server.vercel.app/reviews/id
+
+###### Deployment
+
+The livesite project is deployed at firebase. The project file is kept stored at github
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

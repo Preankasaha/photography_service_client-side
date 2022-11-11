@@ -7,14 +7,14 @@ const ReadReview = ({ id }) => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?serviceID=${id}`)
+        fetch(`https://photo-artisan-server.vercel.app/reviews?serviceID=${id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [id])
     console.log(reviews);
     return (
         <div className='my-14'>
-            
+
             <h1 className='text-5xl text-center text-white'>Total Reviews: {reviews.length}</h1>
             {
                 reviews.map(review => <ServiceReviews
