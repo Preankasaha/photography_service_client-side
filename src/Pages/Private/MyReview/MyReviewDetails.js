@@ -16,13 +16,14 @@ const MyReviewDetails = ({ myreview, handleDelete }) => {
                     <p className='text-xl'>You said:</p>
                     <p className='text-2xl'>{message}</p>
                     <div className="card-actions justify-end">
+                    <button onClick={() => handleDelete(_id)} className="btn glass">Delete</button>
                         <Link to={`/reviewsupdate/${_id}`}> <button className='btn glass'>Update</button> </Link>
 
                     </div>
 
                 </div>
 
-                <button onClick={() => handleDelete(_id)} className="btn glass">Delete</button>
+                
 
 
 

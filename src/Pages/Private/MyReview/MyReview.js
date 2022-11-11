@@ -19,7 +19,7 @@ const MyReview = () => {
             .then(res => res.json())
             .then(data => setMyreviews(data))
     }, [user?.email])
-    console.log(myreviews);
+  
     useTitle('MyReviews')
 
 
@@ -31,7 +31,7 @@ const MyReview = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // console.log(data);
                     if (data.deletedCount > 0) {
                         // alert('deleted successfully');
                         toast.success('deleted successfully');

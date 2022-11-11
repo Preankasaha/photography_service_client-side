@@ -3,7 +3,7 @@ import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import { FaUser } from 'react-icons/fa';
 
 const ServiceReviews = ({ review }) => {
-    // console.log(review);
+   
     const { name, serviceName, message } = review.review;
     const { user } = useContext(AuthContext);
     return (

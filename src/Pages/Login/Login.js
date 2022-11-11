@@ -31,20 +31,20 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+       
 
         //log in user
         loginUser(email, password)
             .then(result => {
                 const user = result.user;
                 // jwt user
-                // console.log(user);
+
                 toast.success('You sign in successfully')
                 const currentUser = {
                     email: user.email
                 }
 
-                console.log(currentUser);
+              
                 //get jwt token
                 fetch('https://photo-artisan-server.vercel.app/jwt', {
                     method: 'POST',
@@ -55,7 +55,7 @@ const Login = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
+                        // console.log(data);
                         localStorage.setItem('photoToken', data.token);
                         navigate(from, { replace: true });
 

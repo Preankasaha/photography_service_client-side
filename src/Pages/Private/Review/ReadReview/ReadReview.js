@@ -11,7 +11,7 @@ const ReadReview = ({ id }) => {
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [id])
-    console.log(reviews);
+ 
     return (
         <div className='my-14'>
 

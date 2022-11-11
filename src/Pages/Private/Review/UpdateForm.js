@@ -5,9 +5,9 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 const UpdateForm = () => {
     const review = useLoaderData();
     const { _id, serviceName } = review;
-    console.log(review);
+    
     const { user } = useContext(AuthContext);
-    console.log(user);
+    
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -34,7 +34,7 @@ const UpdateForm = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
             })
 
 

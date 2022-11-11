@@ -11,9 +11,9 @@ const SignUp = () => {
     const [error, setError] = useState();
 
     useTitle('Signup');
-    // if (loading) {
-    //     return <progress className="progress w-full"></progress>
-    // }
+    if (loading) {
+        return <progress className="progress w-full"></progress>
+    }
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
@@ -21,8 +21,8 @@ const SignUp = () => {
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-
-        // regex
+        
+// regex
         if (!/(?=.*[A-Z])/.test(password)) {
             toast.error('please provide at least one uppercase letter')
             return;
@@ -37,7 +37,7 @@ const SignUp = () => {
                 const user = result.user;
                 //jwt user
                 toast.success('You sign in successfully')
-                console.log(user);
+                // console.log(user);
                 form.reset();
                 handleUpdateUserProfile(name, photoURL)
                 setError('');
