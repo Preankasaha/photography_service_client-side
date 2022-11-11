@@ -74,6 +74,28 @@ const UpdateForm = () => {
                         </form>
                     </div>
                 </div>
+
+
+
+
+                {/* modal */}
+
+                {/* <label htmlFor="my-modal" className="btn">Update</label>
+
+                <form onSubmit={handleUpdate}>
+                    <input type="checkbox" id="my-modal" className="modal-toggle" />
+                    <div className="modal">
+                        <div className="modal-box">
+                            <input type="text" name='name' placeholder="Your name" className="input input-bordered w-full max-w-xs" />
+                            <input type="text" name='email' placeholder="Enter email" className="input input-bordered w-full max-w-xs" defaultValue={user?.email} readOnly />
+                            <input type="textarea" name='message' placeholder="Your review" className="input input-bordered w-full max-w-xs" />
+                            <div className="modal-action">
+                                <label htmlFor="my-modal" className="btn" onClick={handleUpdate}>Update Your Review</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </form> */}
             </div>
         );
     };

@@ -26,7 +26,10 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
-
+        //loader added
+        if (loading) {
+            return <progress className="progress w-full"></progress>
+        }
         //log in user
         loginUser(email, password)
             .then(result => {
@@ -35,10 +38,31 @@ const Login = () => {
                 }
                 const user = result.user;
                 // jwt user
-                console.log(user);
-                form.reset();
-                setError('');
-                navigate(from, { replace: true });
+                // console.log(user);
+
+                const currentUser = {
+                    email: user.email
+                }
+
+                console.log(currentUser);
+                //get jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('photoToken', data.token);
+                        navigate(from, { replace: true });
+
+                    })
+
+
+
             })
 
     }
@@ -49,17 +73,14 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 //jwt user
-                setError('');
+
                 navigate(from, { replace: true });
             }).catch(error => {
                 setError(error.message);
             })
     }
 
-    //loader added
-    if (loading) {
-        return <progress className="progress w-full"></progress>
-    }
+
     return (
         <div>
             <div className="hero min-h-screen" data-theme="night">
