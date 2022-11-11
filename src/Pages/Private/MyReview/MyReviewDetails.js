@@ -12,7 +12,8 @@ const MyReviewDetails = ({ myreview, handleDelete }) => {
 
             <div className="card bg-fuchsia-900 glass w-full bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="card-title">Your review for {serviceName}</h2>
+                    <h2 className="card-title">Your review</h2>
+                    <h2 className="card-title">Name:{name}</h2>
                     <p className='text-xl'>You said:</p>
                     <p className='text-2xl'>{message}</p>
                     <div className="card-actions justify-end">

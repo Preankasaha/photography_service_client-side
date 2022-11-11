@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const ReviewForm = () => {
     const { _id, title, price } = useLoaderData();
     const { user } = useContext(AuthContext);
-  
+
 
     const handleReview = event => {
         event.preventDefault();
