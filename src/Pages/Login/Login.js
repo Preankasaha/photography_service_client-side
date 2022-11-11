@@ -19,10 +19,7 @@ const Login = () => {
     // page title
     useTitle('LogIn');
 
-    //loader added
-    if (loading) {
-        return <progress className="progress w-full"></progress>
-    }
+
     const handleLogIn = event => {
         event.preventDefault();
         const form = event.target;
@@ -37,6 +34,7 @@ const Login = () => {
                     return <progress className="progress w-full"></progress>
                 }
                 const user = result.user;
+                // jwt user
                 console.log(user);
                 form.reset();
                 setError('');
@@ -50,6 +48,7 @@ const Login = () => {
         providerSignIn(googleProvider)
             .then(result => {
                 const user = result.user
+                //jwt user
                 setError('');
                 navigate(from, { replace: true });
             }).catch(error => {
@@ -57,6 +56,10 @@ const Login = () => {
             })
     }
 
+    //loader added
+    if (loading) {
+        return <progress className="progress w-full"></progress>
+    }
     return (
         <div>
             <div className="hero min-h-screen" data-theme="night">

@@ -33,6 +33,7 @@ const SignUp = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+                //jwt user
                 console.log(user);
                 form.reset();
                 handleUpdateUserProfile(name, photoURL)

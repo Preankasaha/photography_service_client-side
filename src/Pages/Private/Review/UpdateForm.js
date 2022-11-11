@@ -42,7 +42,7 @@ const UpdateForm = () => {
             <div className="hero min-h-screen bg-fuchsia-900">
                 <h2 className='text-5xl text-dark bg-dark'>text</h2>
 
-                {/* <div className="hero-content flex-col lg:flex-row glass">
+                <div className="hero-content flex-col lg:flex-row glass">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Leave Your Review Here</h1>
                         <p className="py-6">You are always appreceated for giving your valuable opinion on any service provided by me</p>
@@ -73,7 +73,7 @@ const UpdateForm = () => {
                             </div>
                         </form>
                     </div>
-                </div> */}
+                </div>
             </div>
         );
     };

@@ -25,7 +25,7 @@ const Home = () => {
         <div data-theme='night'>
             <Banner />
 
-            <div>
+            <div className='grid gap-x-2 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     services.map(service => <ServiceSummaryCard key={service.Id} service={service}
                     ></ServiceSummaryCard>)
@@ -36,7 +36,7 @@ const Home = () => {
             <Link to='/services' className='btn btn-accent glass w-1/2 mx-72 my-8'>View All</Link>
 
             <Gallery />
-            
+
         </div>
     );
 };

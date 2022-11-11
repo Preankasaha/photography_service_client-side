@@ -54,6 +54,7 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
+                <img className='w-8 rounded' src="https://i.pinimg.com/736x/7e/56/0c/7e560cacf1c2ad43d7f5fa794983435b.jpg" alt="" />
                 <Link to='/' className="btn btn-ghost normal-case text-xl">Photo Artisan</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -62,7 +63,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                <a className="btn glass">Get started</a>
             </div>
         </div>
     );

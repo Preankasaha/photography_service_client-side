@@ -24,24 +24,6 @@ const ReviewForm = () => {
             message,
         }
 
-
-        
-        // fetch('http://localhost:5000/reviews', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(review)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         if (data.acknowledged) {
-        //             alert('Thanks for your review')
-        //             form.reset();
-
-        //         }
-        //     })
         fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {

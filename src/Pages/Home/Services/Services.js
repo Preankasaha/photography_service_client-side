@@ -19,8 +19,10 @@ const Services = () => {
             })
 
     }, [])
+
+    //loader added
     if (loader) {
-        <h1>loading...</h1>
+        return <progress className="progress w-full"></progress>
     }
     return (
         <div data-theme='night' >
