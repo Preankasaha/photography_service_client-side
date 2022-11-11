@@ -2,31 +2,59 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, loading, updateUserProfile } = useContext(AuthContext);
 
     const [error, setError] = useState();
 
     useTitle('Signup');
+    if (loading) {
+        return <progress className="progress w-full"></progress>
+    }
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, email, password);
-
+        if (!/(?=.*[A-Z])/.test(password)) {
+            toast.error('please provide at least one uppercase letter')
+            return;
+        }
+        if (!/(?=.*[!@#$&*])/.test(password)) {
+            toast.error('please provide at least one special character')
+            return;
+        }
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                form.reset();
+                handleUpdateUserProfile(name, photoURL)
+                setError('');
 
             })
             .catch(error => {
                 console.log(error);
-                setError(error);
+                setError(error.message);
             })
+        const handleUpdateUserProfile = (name, photoURL) => {
+            const profile = {
+                displayName: name,
+                photoURL: photoURL
+            }
+            updateUserProfile(profile)
+                .then(() => { })
+                .catch(error => {
+
+                    setError(error.message);
+                });
+        }
     }
     return (
         <div>
@@ -46,15 +74,21 @@ const SignUp = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text">PhotoURL</span>
+                                </label>
+                                <input type="text" name='photoURL' placeholder="Enter photoURL" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" name="email" placeholder="Enter email" className="input input-bordered" />
+                                <input type="text" name="email" placeholder="Enter email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" />
+                                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             </div>
                             <div className='text-xl text-white'>
                                 {error}
@@ -68,8 +102,10 @@ const SignUp = () => {
                             </div>
                         </form>
                     </div>
+
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

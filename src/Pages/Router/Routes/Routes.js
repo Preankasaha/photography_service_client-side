@@ -7,13 +7,15 @@ import LogIn from '../../LogIn/LogIn';
 import SignUp from '../../SignUp/SignUp';
 import PrivateRoutes from '../PrivateRoutes/PrivateRoutes';
 import ServiceDetailsCard from '../../Home/Services/ServiceDetailsCard';
-import ReviewForm from '../../Private/Review/ReviewForm';
+// import ReviewForm from '../../Private/Review/ReviewForm';
 
 import Review from '../../Private/Review/ReadReview/ReadReview';
 import Blog from '../../Blog/Blog';
 import MyReview from '../../Private/MyReview/MyReview';
 import AddService from '../../Private/AddService/AddService';
 import ReadReview from '../../Private/Review/ReadReview/ReadReview';
+import UpdateForm from '../../Private/Review/UpdateForm';
+import ReviewForm from '../../Private/Review/ReviewForm';
 
 export const router = createBrowserRouter([
     {
@@ -47,18 +49,20 @@ export const router = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
-                element: <PrivateRoutes><ReviewForm /></PrivateRoutes>
+                element: <ReviewForm />
 
             },
 
-            // {
-            //     path: '/reviews/:id',
-            //     loader: ({ params }) => fetch(`http://localhost:5000/reviews?service=${params.id}`),
-            //     element: <ReadReview></ReadReview>
-            // },
             {
                 path: '/myreviews',
                 element: <PrivateRoutes><MyReview /></PrivateRoutes>
+
+            },
+            {
+                path: '/reviewsupdate/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`),
+                element: <UpdateForm />
+
 
             },
             {

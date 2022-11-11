@@ -28,16 +28,17 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider)
     }
 
+    //user profile
+    const updateUserProfile = profile => {
+        return updateProfile(auth.currentUser, profile);
+    }
+
     //log out method
     const logOut = () => {
         // localStorage.removeItem('genius-token');
         return signOut(auth);
     }
 
-    //user profile
-    const updateUserProfile = profile => {
-        return updateProfile(auth.currentUser, profile);
-    }
 
     //to monitor user state
     useEffect(() => {
@@ -58,6 +59,7 @@ const AuthProvider = ({ children }) => {
         createUser,
         loginUser,
         providerSignIn,
+        updateUserProfile,
         logOut
     };
 

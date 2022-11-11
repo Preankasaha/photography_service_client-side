@@ -13,8 +13,9 @@ const ReadReview = ({ id }) => {
     }, [id])
     console.log(reviews);
     return (
-        <div>
-            <h1 className='text-5xl'>review: {reviews.length}</h1>
+        <div className='my-14'>
+            
+            <h1 className='text-5xl text-center text-white'>Total Reviews: {reviews.length}</h1>
             {
                 reviews.map(review => <ServiceReviews
                     key={review._id}
@@ -22,7 +23,7 @@ const ReadReview = ({ id }) => {
                 ></ServiceReviews>)
             }
 
-            
+
         </div>
     );
 };

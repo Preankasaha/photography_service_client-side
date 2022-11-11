@@ -5,7 +5,8 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
-    const { loginUser, providerSignIn, loading } = useContext(AuthContext);
+    const { loginUser, providerSignIn, loading, user } = useContext(AuthContext);
+
     //goggle provider
     const googleProvider = new GoogleAuthProvider();
 
@@ -14,8 +15,14 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+
+    // page title
     useTitle('LogIn');
-    
+
+    //loader added
+    if (loading) {
+        return <progress className="progress w-full"></progress>
+    }
     const handleLogIn = event => {
         event.preventDefault();
         const form = event.target;

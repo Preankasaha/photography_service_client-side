@@ -6,14 +6,22 @@ import ServiceSummaryCard from './ServiceSummaryCard';
 
 const Services = () => {
     const [services, setServices] = useState([]);
+    const [loader, setLoader] = useState(true);
 
     useEffect(() => {
+        setLoader(true);
         fetch('http://localhost:5000/services')
 
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => {
+                setServices(data)
+                setLoader(false)
+            })
 
     }, [])
+    if (loader) {
+        <h1>loading...</h1>
+    }
     return (
         <div data-theme='night' >
             <h2 className='text-5xl text-center py-8'>PACKAGES FOR YOU</h2>

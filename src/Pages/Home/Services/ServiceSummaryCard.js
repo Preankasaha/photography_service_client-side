@@ -7,7 +7,7 @@ const ServiceSummaryCard = ({ service }) => {
     const { title, img, description, duration, price } = service;
     return (
 
-        <div className="card glass md:w-96 bg-base-800 shadow-xl hover:shadow-2xl shadow-fuchsia-300 hover:shadow-fuchsia-500 image-full border-none" >
+        <div className="card md:w-96 bg-base-800 shadow-xl hover:shadow-2xl shadow-fuchsia-300 hover:shadow-fuchsia-500 image-full border-none" >
             {/* data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000" */}
