@@ -31,7 +31,7 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-       
+
 
         //log in user
         loginUser(email, password)
@@ -44,7 +44,7 @@ const Login = () => {
                     email: user.email
                 }
 
-              
+
                 //get jwt token
                 fetch('https://photo-artisan-server.vercel.app/jwt', {
                     method: 'POST',
@@ -87,7 +87,7 @@ const Login = () => {
                 <div className="hero-content flex-col lg:flex-row glass">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="py-6">To visit the full site, plz log in first. If you are new to this site, plz sign up first</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-fuchsia-900">
                         <form onSubmit={handleLogIn} className="card-body">

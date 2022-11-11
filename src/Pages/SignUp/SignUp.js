@@ -21,8 +21,8 @@ const SignUp = () => {
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        
-// regex
+
+        // regex
         if (!/(?=.*[A-Z])/.test(password)) {
             toast.error('please provide at least one uppercase letter')
             return;
@@ -67,7 +67,7 @@ const SignUp = () => {
                 <div className="hero-content flex-col lg:flex-row glass">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Sign Up Now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="py-6">Are you New to this site! Please sign up first.</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-fuchsia-900">
                         <form onSubmit={handleSignUp} className="card-body">
