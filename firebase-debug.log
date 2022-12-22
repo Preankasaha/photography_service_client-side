@@ -1,0 +1,48 @@
+[debug] [2022-11-11T17:46:55.262Z] ----------------------------------------------------------------------
+[debug] [2022-11-11T17:46:55.275Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-11T17:46:55.278Z] CLI Version:   11.15.0
+[debug] [2022-11-11T17:46:55.278Z] Platform:      win32
+[debug] [2022-11-11T17:46:55.279Z] Node Version:  v18.7.0
+[debug] [2022-11-11T17:46:55.293Z] Time:          Fri Nov 11 2022 23:46:55 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-11T17:46:55.295Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-11T17:46:55.790Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-11T17:46:55.793Z] > authorizing via signed-in user (preansaha@gmail.com)
+[debug] [2022-11-11T17:46:55.795Z] [iam] checking project photo-artisan for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-11T17:46:55.812Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions [none]
+[debug] [2022-11-11T17:46:55.814Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions x-goog-quota-user=projects/photo-artisan
+[debug] [2022-11-11T17:46:55.816Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-11T17:46:59.832Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions 200
+[debug] [2022-11-11T17:46:59.834Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-11T17:46:59.846Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/photo-artisan [none]
+[debug] [2022-11-11T17:47:12.336Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/photo-artisan
+[debug] [2022-11-11T17:47:12.832Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/photo-artisan
+    at RetryOperation._fn (C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project photo-artisan. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-11-11T17:58:56.071Z] ----------------------------------------------------------------------
+[debug] [2022-11-11T17:58:56.079Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-11T17:58:56.081Z] CLI Version:   11.15.0
+[debug] [2022-11-11T17:58:56.082Z] Platform:      win32
+[debug] [2022-11-11T17:58:56.082Z] Node Version:  v18.7.0
+[debug] [2022-11-11T17:58:56.101Z] Time:          Fri Nov 11 2022 23:58:56 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-11T17:58:56.103Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-11T17:58:56.545Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-11T17:58:56.548Z] > authorizing via signed-in user (preansaha@gmail.com)
+[debug] [2022-11-11T17:58:56.549Z] [iam] checking project photo-artisan for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-11T17:58:56.563Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions [none]
+[debug] [2022-11-11T17:58:56.565Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions x-goog-quota-user=projects/photo-artisan
+[debug] [2022-11-11T17:58:56.566Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-11T17:58:59.156Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions 200
+[debug] [2022-11-11T17:58:59.157Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/photo-artisan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-11T17:58:59.163Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/photo-artisan [none]
+[debug] [2022-11-11T17:59:00.488Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/photo-artisan 200
+[debug] [2022-11-11T17:59:00.490Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/photo-artisan {"projectId":"photo-artisan","projectNumber":"784735232772","displayName":"photo-artisan","name":"projects/photo-artisan","resources":{"hostingSite":"photo-artisan"},"state":"ACTIVE","etag":"1_296d4038-0296-4b8c-8013-83f0bd49c8d0"}
+[info] 
+[info] === Deploying to 'photo-artisan'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-11T17:59:00.512Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/photo-artisan/versions [none]
+[debug] [2022-11-11T17:59:00.513Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/photo-artisan/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}

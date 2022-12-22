@@ -16,7 +16,7 @@ const Aboutme = () => {
                     <p className='text-2xl my-5'>Besides phopgraphy, I also photography courses. You can avail any one of the course if you feel enthusiast</p>
                     <h2 className='text-2xl font-bold'>Photography courses:</h2>
                     <ul className='text-2xl text white font-semibold'>
-                        <li c>
+                        <li className='my-4'>
                             Candid Photography for 3 months
                         </li>
                         <li className='my-4'>

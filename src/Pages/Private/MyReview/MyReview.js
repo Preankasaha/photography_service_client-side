@@ -8,8 +8,10 @@ import 'react-toastify/dist/ReactToastify.css';
 const MyReview = () => {
     const { user } = useContext(AuthContext);
     const [myreviews, setMyreviews] = useState([]);
+    const [loader, setLoader] = useState(true)
 
     useEffect(() => {
+        setLoader(true)
         fetch(`https://photo-artisan-server.vercel.app/myreviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('photoToken')}`
@@ -17,9 +19,11 @@ const MyReview = () => {
         })
 
             .then(res => res.json())
+            // .then(data => console.log(data))
             .then(data => setMyreviews(data))
+        setLoader(false)
     }, [user?.email])
-  
+
     useTitle('MyReviews')
 
 
@@ -45,20 +49,20 @@ const MyReview = () => {
         <div className='my-8'>
 
             {
-                myreviews.length === 0 ?
+                myreviews?.length === 0 ?
                     <div className=' bg-slate-900 my-24'>
                         <h1 className='text-5xl text-center text-white font-extrabold p-14 glass'>NO REVIEWS WERE ADDED</h1>
                     </div>
                     :
-                    <h1 className='text-5xl text-center text-slate-900'>Total Reviews {myreviews.length}</h1>
-            } 
+                    <h1 className='text-5xl text-center text-slate-900'>Total Reviews {myreviews?.length}</h1>
+            }
 
 
             {
-                myreviews.map(myreview => <MyReviewDetails
-                key={myreview._id}
-                myreview={myreview}
-                handleDelete={handleDelete}
+                myreviews?.map(myreview => <MyReviewDetails
+                    key={myreview._id}
+                    myreview={myreview}
+                    handleDelete={handleDelete}
                 ></MyReviewDetails>)
             }
             <ToastContainer />

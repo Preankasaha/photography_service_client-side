@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 const ServiceSummaryCard = ({ service }) => {
-    
+
     const { title, img, description, duration, price } = service;
     return (
 
         // summarycard
         <div className="card md:w-96 bg-base-100 shadow-xl hover:shadow-2xl shadow-fuchsia-300 hover:shadow-fuchsia-500 border-none glass">
-            
+
             <PhotoProvider>
                 <PhotoView src={img}>
                     <figure className="px-10 pt-10">
@@ -17,8 +17,6 @@ const ServiceSummaryCard = ({ service }) => {
                     </figure>
                 </PhotoView>
             </PhotoProvider>
-
-
 
 
             <div className="card-body">
